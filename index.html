@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion Force Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Battalion Force Management</h1>
+    </header>
+
+    <main id="main-view"> <!-- הוסף את ה-ID הזה -->
+        <!-- טופס ניהול חיילים -->
+        <section id="soldier-form">
+          
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="rank" placeholder="Rank" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="text" id="platoon" placeholder="Platoon"   required>
+            <input type="number" id="missionTime" placeholder="Mission Time (seconds)" required >
+            <select id="status" required>
+                <option value="Active">Active</option>
+                <option value="Reserves">Reserves</option>
+                <option value="Retired">Retired</option>
+            </select>
+            <button onclick="addSoldier()">Add Soldier</button>
+        </section>
+
+        <!-- טבלת חיילים -->
+        <section id="soldiers-list-section">
+            <h2>Forces Overview</h2>
+            <table id="soldiers-table">
+                <thead>
+                    <tr>
+                        <th id="sort-fullname" >Full Name^</th>
+                        <th>Rank</th>
+                        <th>Position</th>
+                        <th>Platoon</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="soldiers-list">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
